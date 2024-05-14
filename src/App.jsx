@@ -1,14 +1,11 @@
-import {Footer, Nav} from "./components/index.jsx";
+import {Header} from "./components/index.js";
 
 function App() {
-  return (
-    <div className="grid gap-4 grid-cols-3 grid-rows-3 bg-slate-500">
-        {/*<Header />*/}
-        <Nav />
-        {/*<Main />*/}
-        <Footer />
-    </div>
-  )
+    return (
+        <div className="container mx-auto border border-amber-500 my-6">
+            <Header/>
+        </div>
+    )
 }
 
 export default App

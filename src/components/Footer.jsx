@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Footer = () => {
     return (
-        <>
+        <footer className="grid grid-cols-2 grid-rows-1">
             <div>
                 <ul>
                     <li><a href="">Home</a></li>
@@ -29,6 +29,6 @@ export const Footer = () => {
                     <li><a href="">TikTok</a></li>
                 </ul>
             </div>
-        </>
+        </footer>
     )
 }

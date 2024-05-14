@@ -1,13 +1,14 @@
-import { Header, Nav, Main, Footer } from './components/index.jsx'
+import {Footer, NavDesktop} from './components/index.js'
+
 const App = () => {
-  return (
-    <>
-      {/*<Header />*/}
-        <Nav />
-        {/*<Main />*/}
-        <Footer />
-    </>
-  );
+    return (
+        <>
+            {/*<Header />*/}
+            <NavDesktop/>
+            {/*<Main />*/}
+            <Footer/>
+        </>
+    );
 }
 
 export default App

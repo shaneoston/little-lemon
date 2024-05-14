@@ -1,4 +1,11 @@
-// .prettierrc
 {
-  "plugins": ["prettier-plugin-tailwindcss"]
+  "useTabs": false,
+  "printWidth": 80,
+  "tabWidth": 2,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "bracketSameLine": true,
+  "parser": "babylon",
+  "noSemi": true,
+  "rcVerbose": false
 }
