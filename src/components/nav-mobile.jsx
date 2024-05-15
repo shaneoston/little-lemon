@@ -14,7 +14,7 @@ export const NavMobile = () => {
       <Hamburger toggled={isOpen} size={20} toggle={setOpen} />
       {isOpen && (
         <div
-          className="container fixed shadow-4xl left-0 right-0 top-[5rem] p-5 pt-0 border border-black">
+          className="container fixed shadow-4xl left-0 right-0 top-[5rem] p-5 pt-0 border border-little-green">
           <ul className="grid gap-2">
             {routes.map(({ title, href }) => {
 

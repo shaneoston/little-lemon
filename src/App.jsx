@@ -1,11 +1,12 @@
-import {Header} from "./components/index.js";
+import { Header, Main } from './components/index.js';
 
 function App() {
-    return (
-        <div className="container mx-auto border border-amber-500 my-6">
-            <Header/>
-        </div>
-    )
+  return (
+    <>
+      <Header />
+      <Main />
+    </>
+  );
 }
 
-export default App
+export default App;

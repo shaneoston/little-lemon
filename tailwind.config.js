@@ -1,18 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: [
-        "index.html",
-        "./src/**/*.{html,js,jsx}"
-    ],
-    theme: {
-        container: {
-            center: true
-        },
-        color: {
-            'green': '#495e57',
-            'gold': '#ee9972'
-        },
-        extend: {},
+  content: [
+    'index.html',
+    './src/**/*.{html,js,jsx}'
+  ],
+  theme: {
+    container: {
+      center: true
     },
-    plugins: [],
-}
+    extend: {
+      colors: {
+        'llgreen': '#495e57',
+        'llgold': '#f4ce14'
+      },
+      fontFamily: {
+        'sans': 'Karla',
+        'serif': '"Markazi Text"'
+      }
+    }
+  },
+  plugins: []
+};
