@@ -1,7 +1,7 @@
 import { Hero } from './hero.jsx';
 import { Specials } from './specials.jsx';
 
-export const Main = () => {
+export const Homepage = () => {
   return (
     <>
       <main>

@@ -11,7 +11,8 @@ module.exports = {
     extend: {
       colors: {
         'llgreen': '#495e57',
-        'llgold': '#f4ce14'
+        'llgold': '#f4ce14',
+        'llsalmon': '#ee9972'
       },
       fontFamily: {
         'sans': 'Karla',

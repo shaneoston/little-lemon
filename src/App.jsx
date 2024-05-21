@@ -1,10 +1,10 @@
-import { Header, Main } from './components/index.js';
+import { Header, Homepage } from './components/index.js';
 
 function App() {
   return (
     <>
       <Header />
-      <Main />
+      <Homepage />
     </>
   );
 }
