@@ -1,11 +1,13 @@
 import { Hero } from './hero.jsx';
+import { Specials } from './specials.jsx';
 
 export const Main = () => {
   return (
-    <div className="bg-llgreen lg:h-84">
-      <main className="container">
+    <>
+      <main>
         <Hero />
+        <Specials />
       </main>
-    </div>
+    </>
   );
 };
