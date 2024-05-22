@@ -610,8 +610,24 @@ video {
   margin: auto;
 }
 
+.m-3 {
+  margin: 0.75rem;
+}
+
 .mb-5 {
   margin-bottom: 1.25rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
 }
 
 .flex {
@@ -638,12 +654,40 @@ video {
   height: 15rem;
 }
 
+.h-40 {
+  height: 10rem;
+}
+
+.max-h-52 {
+  max-height: 13rem;
+}
+
+.max-h-40 {
+  max-height: 10rem;
+}
+
+.min-h-40 {
+  min-height: 10rem;
+}
+
 .w-40 {
   width: 10rem;
 }
 
 .w-full {
   width: 100%;
+}
+
+.min-w-52 {
+  min-width: 13rem;
+}
+
+.max-w-40 {
+  max-width: 10rem;
+}
+
+.shrink {
+  flex-shrink: 1;
 }
 
 .grid-cols-2 {
@@ -686,6 +730,11 @@ video {
   border-radius: 0.75rem;
 }
 
+.rounded-l {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
 .rounded-bl-lg {
   border-bottom-left-radius: 0.5rem;
 }
@@ -718,9 +767,19 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.object-fill {
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .p-1 {
@@ -771,6 +830,11 @@ video {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .pb-4 {
