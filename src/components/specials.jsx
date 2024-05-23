@@ -26,17 +26,17 @@ export const Specials = () => {
   ];
 
   return (
-    <div className="container">
-      <div className="p-6 lg:flex lg:justify-between lg:pt-24">
-        <h1 className="font-serif text-6xl pb-4">This weeks specials!</h1>
-        <button className="bg-llgold font-sans px-4 py-3 text-xl font-semibold rounded-lg w-full">Online menu</button>
+    <div className="container max-w-4xl p-6 md:pt-12 sm:p-6">
+      <div className="md:flex  md:justify-between">
+        <h1 className="font-serif w-1/2 text-6xl pb-4 md:w-3/4">This weeks specials!</h1>
+        <button className="bg-llgold font-sans px-4 py-3 text-xl font-semibold rounded-lg w-full md:w-48 md:h-14">
+          Online menu
+        </button>
       </div>
-      <div>
-        {specials.map((special, idx) => (
-            <SpecialCard key={idx} {...special} />
-          )
-        )}
-      </div>
+      <div className="md:flex md:gap-4">{specials.map((special, idx) => (
+          <SpecialCard key={idx} {...special} />
+        )
+      )}</div>
     </div>
   );
 };
