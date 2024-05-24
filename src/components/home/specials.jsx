@@ -1,7 +1,7 @@
 import { SpecialCard } from './special-card.jsx';
-import GreekSalad from '../assets/greekSalad.jpg';
-import Bruchetta from '../assets/bruchetta.svg';
-import Dessert from '../assets/lemondessert.jpg';
+import GreekSalad from '../../assets/greekSalad.jpg';
+import Bruchetta from '../../assets/bruchetta.svg';
+import Dessert from '../../assets/lemondessert.jpg';
 
 export const Specials = () => {
   const specials = [

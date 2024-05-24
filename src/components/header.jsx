@@ -1,6 +1,5 @@
 import logo from '../assets/logo.svg';
-import { NavDesktop } from './nav-desktop.jsx';
-import { NavMobile } from './nav-mobile.jsx';
+import { NavDesktop, NavMobile } from './nav';
 
 export const Header = () => {
   return (

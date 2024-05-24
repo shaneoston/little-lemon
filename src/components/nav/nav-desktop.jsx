@@ -1,4 +1,5 @@
-import { routes } from '../routes';
+import { NavLink } from 'react-router-dom';
+import { routes } from '../../routes';
 
 export const NavDesktop = () => {
   return (
@@ -6,10 +7,10 @@ export const NavDesktop = () => {
       {routes.map((route) => {
         const { title, href } = route;
         return <li key={title}>
-          <a href={href}
-             className="flex items-center gap-1 hover:text-gold transition-all text-lg">
+          <NavLink to={href}
+                   className="flex items-center gap-1 hover:text-llgreen hover:font-bold hover:underline transition-all text-lg">
             {title}
-          </a>
+          </NavLink>
         </li>;
       })}
     </ul>

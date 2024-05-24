@@ -903,6 +903,33 @@ video {
   transition-duration: 150ms;
 }
 
+.hover\:bg-gray-300:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+.hover\:font-bold:hover {
+  font-weight: 700;
+}
+
+.hover\:text-llgold:hover {
+  --tw-text-opacity: 1;
+  color: rgb(244 206 20 / var(--tw-text-opacity));
+}
+
+.hover\:text-llgreen:hover {
+  --tw-text-opacity: 1;
+  color: rgb(73 94 87 / var(--tw-text-opacity));
+}
+
+.hover\:hover\:underline:hover:hover {
+  text-decoration-line: underline;
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
+}
+
 @media (min-width: 640px) {
   .sm\:w-3\/4 {
     width: 75%;
