@@ -1,2 +1,2 @@
 export * from './hero';
-export * from './specials.jsx';
+export * from './specials';
