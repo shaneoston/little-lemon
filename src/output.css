@@ -703,6 +703,10 @@ video {
   gap: 0.5rem;
 }
 
+.gap-5 {
+  gap: 1.25rem;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -1091,6 +1095,11 @@ video {
   .md\:px-5 {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+
+  .md\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .md\:pr-6 {

@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { Header } from './components';
+import { Footer, Header } from './components';
 import { BookingPage, Home } from './pages';
 
 
@@ -11,6 +11,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/booking" element={<BookingPage />} />
       </Routes>
+      <Footer />
     </>
   );
 }
