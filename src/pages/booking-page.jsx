@@ -1,6 +1,6 @@
 import { BookingForm, BookingHero } from '../components';
 
-export const BookingPage = () => {
+export const BookingPage = ({ times, handleTimeSelection }) => {
   const handleBooking = (booking => {
     console.log(booking);
   });
@@ -12,7 +12,10 @@ export const BookingPage = () => {
         <h1 className="font-serif w-100 text-6xl">Make a booking</h1>
       </div>
       <div className="container max-w-4xl px-6">
-        <BookingForm handleBooking={handleBooking} />
+        <BookingForm
+          handleBooking={handleBooking}
+          times={times}
+          handleTime={handleTimeSelection} />
       </div>
     </>
   );

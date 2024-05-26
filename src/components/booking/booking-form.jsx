@@ -1,26 +1,19 @@
 import { useState } from 'react';
 
-export const BookingForm = ({ handleBooking }) => {
+export const BookingForm = ({ handleBooking, times, handleTime }) => {
   const [bookingData, setBookingData] = useState({
     date: '',
     time: '17:00',
     guests: 1,
     occasion: ''
   });
-  const [availableTimes] = useState([
-    '17:00',
-    '18:00',
-    '19:00',
-    '20:00',
-    '21:00',
-    '22:00'
-  ]);
 
   const updateKey = (key, { target: { value } }) => {
     setBookingData({
       ...bookingData,
       [key]: value || null
     });
+    if (key === 'time') handleTime();
   };
 
   return (
@@ -37,7 +30,7 @@ export const BookingForm = ({ handleBooking }) => {
                 id="booking-time"
                 value={bookingData.time}
                 onChange={evt => updateKey('time', evt)}>
-          {availableTimes.map(time => (
+          {times().times.map(time => (
             <option key={time}>{time}</option>
           ))}
         </select>
