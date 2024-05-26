@@ -24,12 +24,14 @@ export const BookingForm = ({ handleBooking, times, handleTime }) => {
                value={bookingData.date}
                onChange={evt => updateKey('date', evt)}
                type="date"
-               id="booking-date" />
+               id="booking-date"
+               aria-label="Choose date" />
         <label htmlFor="booking-time">Choose time</label>
         <select className="border border-gray-600 p-6 mb-3"
                 id="booking-time"
                 value={bookingData.time}
-                onChange={evt => updateKey('time', evt)}>
+                onChange={evt => updateKey('time', evt)}
+                aria-label="Choose time">
           {times().times.map(time => (
             <option key={time}>{time}</option>
           ))}
@@ -43,12 +45,14 @@ export const BookingForm = ({ handleBooking, times, handleTime }) => {
                id="guests"
                value={bookingData.guests}
                onChange={evt => updateKey('guests', evt)}
+               aria-label="Enter number of guests"
         />
         <label htmlFor="occasion">Occasion</label>
         <select className="border border-gray-600 p-6 mb-3"
                 id="occasion"
                 value={bookingData.occasion}
-                onChange={evt => updateKey('occasion', evt)}>
+                onChange={evt => updateKey('occasion', evt)}
+                aria-label="Choose occasion">
           <option value=""></option>
           <option value="birthday">Birthday</option>
           <option value="anniversary">Anniversary</option>
