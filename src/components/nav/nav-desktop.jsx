@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { routes } from '../../routes';
 
 export const NavDesktop = () => {
@@ -7,10 +7,10 @@ export const NavDesktop = () => {
       {routes.map((route) => {
         const { title, href } = route;
         return <li key={title}>
-          <NavLink to={href}
-                   className="flex items-center gap-1 hover:text-llgreen hover:font-bold hover:underline transition-all text-lg">
+          <Link to={href}
+                className="flex items-center gap-1 hover:text-llgreen hover:font-bold hover:underline transition-all text-lg">
             {title}
-          </NavLink>
+          </Link>
         </li>;
       })}
     </ul>

@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useClickAway } from 'react-use';
 import { Squash as Hamburger } from 'hamburger-react';
 import { routes } from '../../routes';
@@ -22,14 +22,14 @@ export const NavMobile = () => {
                 <li
                   key={title}
                   className="w-full p-[0.08rem] rounded-xl">
-                  <NavLink
+                  <Link
                     onClick={() => setOpen((prev) => !prev)}
                     className={
                       'flex items-center justify-between w-full p-1 rounded-xl'
                     }
                     to={href}>
                     <span className="flex gap-1 text-lg">{title}</span>
-                  </NavLink>
+                  </Link>
                 </li>
               );
             })}
