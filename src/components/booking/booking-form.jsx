@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export const BookingForm = ({ handleBooking, times, handleTime }) => {
   const [bookingData, setBookingData] = useState({
@@ -7,6 +7,18 @@ export const BookingForm = ({ handleBooking, times, handleTime }) => {
     guests: 1,
     occasion: ''
   });
+  const [availableTimes, setAvailableTimes] = useState([]);
+
+  useEffect(() => {
+    if (times) {
+      async function timesFromReducer() {
+        const res = await times();
+        setAvailableTimes(res.times);
+      }
+
+      timesFromReducer();
+    }
+  }, [times]);
 
   const updateKey = (key, { target: { value } }) => {
     setBookingData({
@@ -32,7 +44,7 @@ export const BookingForm = ({ handleBooking, times, handleTime }) => {
                 value={bookingData.time}
                 onChange={evt => updateKey('time', evt)}
                 aria-label="Choose time">
-          {times().times.map(time => (
+          {availableTimes.map(time => (
             <option key={time}>{time}</option>
           ))}
         </select>
