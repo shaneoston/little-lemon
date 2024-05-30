@@ -1,26 +1,37 @@
 export const routes = [
   {
     title: 'Home',
-    href: '/'
+    href: '/',
+    hidden: false
   },
   {
     title: 'About',
-    href: '#'
+    href: '#',
+    hidden: false
   },
   {
     title: 'Menu',
-    href: '#'
+    href: '#',
+    hidden: false
   },
   {
     title: 'Reservations',
-    href: '/booking'
+    href: '/booking',
+    hidden: false
   },
   {
     title: 'Order Online',
-    href: '#'
+    href: '#',
+    hidden: false
   },
   {
     title: 'Login',
-    href: '#'
+    href: '#',
+    hidden: false
+  },
+  {
+    title: 'Confirmation',
+    href: '/confirmation',
+    hidden: true
   }
 ];

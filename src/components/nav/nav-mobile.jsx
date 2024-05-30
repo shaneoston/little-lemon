@@ -7,7 +7,7 @@ import { routes } from '../../routes';
 export const NavMobile = () => {
   const [isOpen, setOpen] = useState(false);
   const { ref } = useRef(null);
-
+  const showRoutes = routes.filter(r => !r.hidden);
   useClickAway(ref, () => setOpen(false));
 
   return (
@@ -17,7 +17,7 @@ export const NavMobile = () => {
         <div
           className="container fixed bg-white shadow-4xl left-0 right-0 top-[5rem] p-5 pt-0 border border-little-green">
           <ul className="grid gap-2">
-            {routes.map(({ title, href }) => {
+            {showRoutes.map(({ title, href }) => {
               return (
                 <li
                   key={title}
