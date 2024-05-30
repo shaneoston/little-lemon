@@ -9,7 +9,7 @@ export const BookingForm = ({ availableTimes, dispatch, ...props }) => {
 
   const formik = useFormik({
     initialValues: {
-      date: (new Date()).toLocaleDateString('en-us'),
+      date: '',
       time: availableTimes.times[0],
       guests: 1,
       occasion: 'birthday'
@@ -18,7 +18,7 @@ export const BookingForm = ({ availableTimes, dispatch, ...props }) => {
       const response = submitAPI(values);
       if (response) {
         localStorage.setItem('Bookings', JSON.stringify(values));
-        // navigate('/confirmation');
+        navigate('/confirmation');
         console.log(values);
       }
 
@@ -85,9 +85,10 @@ export const BookingForm = ({ availableTimes, dispatch, ...props }) => {
           <option value="anniversary">Anniversary</option>
         </select>
         <div className="text-fuchsia-700 text-sm font-bold">{formik.touched.occasion && formik.errors.occasion}</div>
-        <input className="bg-llgold font-sans px-4 py-6 text-xl font-semibold rounded-lg w-full md:w-48 md:h-14"
-               type="submit"
-               value="Make Your Booking" />
+        <input
+          className="bg-llgold font-sans px-4 py-6 text-xl font-semibold rounded-lg w-full md:w-60"
+          type="submit"
+          value="Make Your Booking" />
       </form>
     </>
   );

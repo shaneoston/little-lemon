@@ -30,7 +30,7 @@ export const routes = [
     hidden: false
   },
   {
-    title: 'Confirmation',
+    title: 'BookingConfirmation',
     href: '/confirmation',
     hidden: true
   }

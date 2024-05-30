@@ -19,7 +19,6 @@ export const fetchAPI = (date) => {
       result.push(i + ':30');
     }
   }
-  console.log('result', result);
   return result;
 };
 

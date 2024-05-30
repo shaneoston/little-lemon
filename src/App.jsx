@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { Footer, Header } from './components';
-import { BookingPage, Home } from './pages';
+import { BookingConfirmation, BookingPage, Home } from './pages';
 
 
 function App() {
@@ -11,6 +11,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/booking"
                element={<BookingPage />} />
+        <Route path="/confirmation"
+               element={<BookingConfirmation />} />
       </Routes>
       <Footer />
     </>

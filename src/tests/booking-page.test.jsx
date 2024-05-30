@@ -1,18 +1,22 @@
 import { describe, expect, test } from 'vitest';
-import { fireEvent, render, screen } from '@testing-library/react';
-import { BookingPage } from '../pages';
+import { fetchAPI, initializeTimes, updateTimes } from '../utils/utils.js';
 
-describe('BookingPage tests', () => {
-  test('Renders the BookingPage heading', () => {
-    render(<BookingPage />);
-    const title = screen.getByText('Make a booking');
-    expect(title).toBeInTheDocument();
+const mockUsedNavigate = vitest.fn();
+describe('Booking Form tests', () => {
+
+  test('initializeTimes returns the correct expected value', () => {
+    const today = new Date();
+    const initialState = initializeTimes();
+    const expectedResult = { times: fetchAPI(today) };
+    expect(initialState).toEqual(expectedResult);
   });
 
-  test('initializeTimes returns array of times', () => {
-    const { getTestId, getAllByTestId } = render(<BookingPage />);
-    fireEvent.change(getTestId('times'), { target: { value: 0 } });
-    let options = getAllByTestId('times-option');
-    console.log(options);
+  test('updateTimes returns the same state', () => {
+    const state = {
+      times: ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00']
+    };
+    const action = { type: 'SOME_ACTION' };
+    const newState = updateTimes(state, action);
+    expect(newState).toEqual(state);
   });
 });
