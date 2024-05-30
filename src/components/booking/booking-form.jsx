@@ -26,7 +26,7 @@ export const BookingForm = ({ availableTimes, dispatch, ...props }) => {
     validationSchema: Yup.object({
       date: Yup.date().required('A date is required'),
       time: Yup.string().oneOf(availableTimes.times).required('A time for booking is required'),
-      guests: Yup.number().min(1, 'Booking must be for at least be one person').max(10, 'Booking cannot be for more than 10 persons').required('Number of guests is required'),
+      guests: Yup.number().min(1, 'Must be at least 1').max(10).required('Number of guests is required'),
       occasion: Yup.string().oneOf(['birthday', 'engagement', 'anniversary']).required('Occasion is required')
     })
   });
@@ -72,7 +72,10 @@ export const BookingForm = ({ availableTimes, dispatch, ...props }) => {
                aria-label="Enter number of guests"
                {...formik.getFieldProps('guests')}
         />
-        <div className="text-fuchsia-700 text-sm font-bold">{formik.touched.guests && formik.errors.guests}</div>
+        <div className="text-fuchsia-700 text-sm font-bold"
+             data-testid="guests-error">
+          {formik.touched.guests && formik.errors.guests}
+        </div>
         <label htmlFor="occasion">Occasion</label>
         <select className="border border-gray-600 p-6 mb-3"
                 id="occasion"
