@@ -1,10 +1,10 @@
 import { BookingForm, BookingHero } from '../components';
+import { useReducer } from 'react';
+import { initializeTimes, updateTimes } from '../utils/utils.js';
 
-export const BookingPage = ({ times, handleTimeSelection }) => {
-  const handleBooking = (booking => {
-    console.log(booking);
-  });
-
+export const BookingPage = () => {
+  const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
+  
   return (
     <>
       <BookingHero />
@@ -13,9 +13,8 @@ export const BookingPage = ({ times, handleTimeSelection }) => {
       </div>
       <div className="container max-w-4xl px-6">
         <BookingForm
-          handleBooking={handleBooking}
-          times={times}
-          handleTime={handleTimeSelection} />
+          availableTimes={availableTimes}
+          dispatch={dispatch} />
       </div>
     </>
   );
