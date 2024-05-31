@@ -33,7 +33,7 @@ export const Specials = () => {
           Online menu
         </button>
       </div>
-      <div className="md:flex md:gap-4">{specials.map((special, idx) => (
+      <div className="mt-6 md:flex md:gap-4">{specials.map((special, idx) => (
           <SpecialCard key={idx} {...special} />
         )
       )}</div>
